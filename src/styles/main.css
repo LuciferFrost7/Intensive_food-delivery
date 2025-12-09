@@ -1,0 +1,26 @@
+:root {
+  --bg-color-main1: #ffffff;
+  --bg-color-main2: #f3f3f3;
+  --nav-font-color: #595959;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color-main2);
+  font-family: Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  max-width: 1230px;
+  width: 100%;
+  min-width: 320px;
+  padding: 10px 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
