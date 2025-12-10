@@ -1,7 +1,14 @@
 :root {
-  --bg-color-main1: #ffffff;
+  --bg-color-main1: #f5f5f5;
   --bg-color-main2: #f3f3f3;
-  --nav-font-color: #595959;
+  --bg-color-main3: #ffffff;
+  --bg-color-blue: #1890ff;
+  --color-white: #ffffff;
+  --font-color: #595959;
+  --font-dark-color: #302c34;
+  --font-black-color: #000000;
+  --border-light: #9d9d9d;
+  --placeholder-color: #bfbfbf;
 }
 
 html,
@@ -14,6 +21,12 @@ body {
 
 * {
   box-sizing: border-box;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .wrapper {

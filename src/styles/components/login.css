@@ -1,0 +1,21 @@
+.login {
+  border: none;
+  background-color: var(--bg-color-blue);
+  max-height: 44px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 4px;
+  padding: 8px 16px;
+}
+
+.login__image {
+  width: 16px;
+  object-fit: contain;
+}
+
+.login__text {
+  color: var(--color-white);
+}

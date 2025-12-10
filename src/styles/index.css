@@ -1,0 +1,14 @@
+@import url("./main.css");
+@import url("./header.css");
+@import url("./components/banner.css");
+@import url("./components/products/products-header.css");
+@import url("./footer.css");
+
+.delivery-main {
+  flex-grow: 1;
+  background: linear-gradient(
+    180deg,
+    var(--bg-color-main3) 1.04%,
+    var(--bg-color-main1) 100%
+  );
+}

@@ -1,0 +1,17 @@
+.delivery-logo {
+  max-width: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+}
+
+.delivery-logo__image {
+  max-width: 32px;
+  object-fit: contain;
+}
+
+.delivery-logo__title {
+  margin: 0;
+  max-width: min-content;
+}

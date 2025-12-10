@@ -1,40 +1,7 @@
-.delivery-header {
-  background-color: var(--bg-color-main1);
-  height: 124px;
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-.delivery-header__inner {
-  max-width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-.delivery-logo {
-  max-width: 100px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 12px;
-}
-
-.delivery-logo__image {
-  max-width: 32px;
-  object-fit: contain;
-}
-
-.delivery-logo__title {
-  margin: 0;
-  max-width: min-content;
-}
+@import url("./components/delivery-logo.css");
 
 .delivery-footer {
-  background-color: var(--bg-color-main1);
+  background-color: var(--bg-color-main3);
   height: 156px;
   display: flex;
   align-items: center;
@@ -69,7 +36,7 @@
 
 .delivery-footer__navigation-item > a {
   text-decoration: none;
-  color: var(--nav-font-color);
+  color: var(--font-color);
 }
 
 .delivery-footer__navigation-item:not(:last-child) {

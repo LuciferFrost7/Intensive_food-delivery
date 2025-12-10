@@ -1,0 +1,21 @@
+.shopping-cart {
+  border: 1px solid var(--border-light);
+  background-color: var(--bg-color-main3);
+  max-height: 44px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  gap: 4px;
+  padding: 8px 16px;
+}
+
+.shopping-cart__image {
+  width: 16px;
+  object-fit: contain;
+}
+
+.shopping-cart__text {
+  color: var(--font-color);
+}

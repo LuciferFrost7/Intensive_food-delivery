@@ -1,0 +1,28 @@
+@import url("./components/delivery-logo.css");
+@import url("./components/login.css");
+@import url("./components//shopping-cart.css");
+
+.delivery-header {
+  background-color: var(--bg-color-main3);
+  height: 124px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.delivery-header__inner {
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.delivery-header__controls {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  gap: 10px;
+}
