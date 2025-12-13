@@ -1,5 +1,6 @@
-const products = {
-  id2: [
+const products = [
+  [],
+  [
     {
       id: "1",
       image: {
@@ -95,6 +96,10 @@ const products = {
       price: 250,
     },
   ],
-};
+  [],
+  [],
+  [],
+  [],
+];
 
 export default products;

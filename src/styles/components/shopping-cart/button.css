@@ -1,4 +1,4 @@
-.shopping-cart {
+.shopping-cart__button {
   border: 1px solid var(--border-light);
   background-color: var(--bg-color-main3);
   max-height: 44px;
@@ -11,11 +11,11 @@
   padding: 8px 16px;
 }
 
-.shopping-cart__image {
+.shopping-cart__button-image {
   width: 16px;
   object-fit: contain;
 }
 
-.shopping-cart__text {
+.shopping-cart__button-text {
   color: var(--font-color);
 }

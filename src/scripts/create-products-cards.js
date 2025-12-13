@@ -1,12 +1,8 @@
 import products from "./constants/products.js";
-import restaurants from "./constants/restaurants.js";
-
-const restaurantName = document.querySelector("#restaurant-name");
-const restaurantType = document.querySelector("#restaurant-type");
-const restaurantPrice = document.querySelector("#restaurant-price");
-const restaurantRating = document.querySelector("#restaurant-rating");
 
 const productsList = document.querySelector("#products-list");
+const shoppingCartBody = document.querySelector(".shopping-cart__body");
+const shoppingCartTotal = document.querySelector("#shopping-cart-total");
 
 function createProductCard(productElement) {
   /*
@@ -77,12 +73,106 @@ function createProductCard(productElement) {
   return productCard;
 }
 
-restaurantName.textContent = restaurants[2].name;
-restaurantType.textContent = restaurants[2].type;
-restaurantPrice.textContent = "От " + restaurants[2].min_price + " ₽";
-restaurantRating.textContent = restaurants[2].rating;
+function createProductInShoppingCart(productElement) {
+  /*
+  <div class="shopping-cart__point">
+    <div class="shopping-cart__point-info">
+      <div class="shopping-cart__point-name">aboba</div>
+      <div class="shopping-cart__point-details">
+        <p class="shopping-cart__point-price">250 p</p>
+        <div class="shopping-cart__point-controls">
+          <button class="shopping-cart__point-add">+</button>
+          <p class="shopping-cart__point-count">0</p>
+          <button class="shopping-cart__point-sub">-</button>
+        </div>
+      </div>
+    </div>
+    <hr class="shopping-cart__point-underline" />
+  </div>
+  */
+  const shoppingCartPoint = document.createElement("div");
 
-products["id2"].forEach((product) => {
+  // point-info
+  const shoppingCartPointInfo = document.createElement("div");
+  shoppingCartPointInfo.className = "shopping-cart__point-info";
+
+  const shoppingCartPointName = document.createElement("p");
+  shoppingCartPointName.className = "shopping-cart__point-name";
+  shoppingCartPointName.textContent = productElement.name;
+
+  // point-details
+  const shoppingCartPointDetails = document.createElement("div");
+  shoppingCartPointDetails.className = "shopping-cart__point-details";
+
+  const shoppingCartPointPrice = document.createElement("p");
+  shoppingCartPointPrice.className = "shopping-cart__point-price";
+  shoppingCartPointPrice.textContent = `${productElement.price} ₽`;
+
+  // point-controls
+  const shoppingCartPointControls = document.createElement("div");
+  shoppingCartPointControls.className = "shopping-cart__point-controls";
+
+  const shoppingCartPointCount = document.createElement("p");
+  shoppingCartPointCount.className = "shopping-cart__point-count";
+  shoppingCartPointCount.id = `shopping-cart-point-${productElement.id}-count`;
+  shoppingCartPointCount.textContent = "0";
+
+  const shoppingCartPointAddButton = document.createElement("button");
+  shoppingCartPointAddButton.className = "shopping-cart__point-add";
+  shoppingCartPointAddButton.textContent = "+";
+  shoppingCartPointAddButton.addEventListener("click", () => {
+    if (Number(shoppingCartPointCount.textContent) < 99) {
+      shoppingCartPointCount.textContent =
+        Number(shoppingCartPointCount.textContent) + 1;
+
+      shoppingCartTotal.textContent =
+        Number(shoppingCartTotal.textContent.split(" ")[0]) +
+        productElement.price +
+        " ₽";
+    }
+  });
+
+  const shoppingCartPointSubButton = document.createElement("button");
+  shoppingCartPointSubButton.className = "shopping-cart__point-sub";
+  shoppingCartPointSubButton.textContent = "-";
+  shoppingCartPointSubButton.addEventListener("click", () => {
+    if (Number(shoppingCartPointCount.textContent) > 0) {
+      shoppingCartPointCount.textContent =
+        Number(shoppingCartPointCount.textContent) - 1;
+
+      shoppingCartTotal.textContent =
+        Number(shoppingCartTotal.textContent.split(" ")[0]) -
+        productElement.price +
+        " ₽";
+    }
+  });
+
+  shoppingCartPointControls.appendChild(shoppingCartPointAddButton);
+  shoppingCartPointControls.appendChild(shoppingCartPointCount);
+  shoppingCartPointControls.appendChild(shoppingCartPointSubButton);
+
+  shoppingCartPointDetails.appendChild(shoppingCartPointPrice);
+  shoppingCartPointDetails.appendChild(shoppingCartPointControls);
+
+  shoppingCartPointInfo.appendChild(shoppingCartPointName);
+  shoppingCartPointInfo.appendChild(shoppingCartPointDetails);
+
+  const shoppingCartPointUnderline = document.createElement("hr");
+  shoppingCartPointUnderline.className = "shopping-cart__point-underline";
+
+  shoppingCartPoint.appendChild(shoppingCartPointInfo);
+  shoppingCartPoint.appendChild(shoppingCartPointUnderline);
+
+  return shoppingCartPoint;
+}
+
+const url = new URL(window.location.href);
+const restaurantId = url.searchParams.get("restaurant") - 1;
+
+products[restaurantId].forEach((product) => {
   const productCard = createProductCard(product);
+  const shoppingCardPoint = createProductInShoppingCart(product);
+
   productsList.appendChild(productCard);
+  shoppingCartBody.appendChild(shoppingCardPoint);
 });

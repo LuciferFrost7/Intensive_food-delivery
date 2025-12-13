@@ -21,7 +21,7 @@ const restaurants = [
     rating: 4.5,
     min_price: 900,
     time: 50,
-    type: "Пицца",
+    type: "Пицца и суши",
   },
   {
     id: "3",

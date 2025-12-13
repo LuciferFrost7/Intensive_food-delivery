@@ -3,12 +3,20 @@
   --bg-color-main2: #f3f3f3;
   --bg-color-main3: #ffffff;
   --bg-color-blue: #1890ff;
+  --bg-color-banner: #fff1b8;
+  --bg-color-black: #000000;
   --color-white: #ffffff;
+  --color-rating: #ffc107;
+  --color-blue: #1890ff;
   --font-color: #595959;
+  --font-color-light: #8c8c8c;
+  --font-color-lighter: #d9d9d9;
   --font-dark-color: #302c34;
   --font-black-color: #000000;
   --border-light: #9d9d9d;
   --placeholder-color: #bfbfbf;
+  --shadow-light-grey: #0000000d;
+  --shadow-medium-grey: #00000033;
 }
 
 html,

@@ -4,14 +4,14 @@
   overflow: auto;
   width: 100%;
   border-radius: 7px;
-  box-shadow: 0 4px 12px #0000000d;
+  box-shadow: 0 4px 12px var(--shadow-light-grey);
 
   @media screen and (min-width: 576px) {
-    width: calc((100% - 24px) / 2);
+    width: calc((100% - 10px) / 2);
   }
 
   @media screen and (min-width: 991px) {
-    width: calc((100% - 48px) / 3);
+    width: calc((100% - 20px) / 3);
   }
 }
 
@@ -29,14 +29,14 @@
 }
 
 .products__card-name {
-  color: black;
+  color: var(--font-black-color);
   font-size: 24px;
   font-weight: normal;
   margin: 0;
 }
 
 .products__card-ingredients {
-  color: #8c8c8c;
+  color: var(--font-color-light);
   margin: 0;
 }
 
@@ -51,7 +51,7 @@
 .products__card-add {
   border: none;
   background-color: var(--bg-color-blue);
-  color: white;
+  color: var(--color-white);
   max-height: 44px;
   display: flex;
   flex-direction: row;

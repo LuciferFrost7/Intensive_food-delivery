@@ -4,7 +4,7 @@
   overflow: auto;
   width: 100%;
   border-radius: 7px;
-  box-shadow: 0 4px 12px #0000000d;
+  box-shadow: 0 4px 12px var(--shadow-light-grey);
 
   @media screen and (min-width: 576px) {
     width: calc((100% - 24px) / 2);
@@ -13,6 +13,14 @@
   @media screen and (min-width: 991px) {
     width: calc((100% - 48px) / 3);
   }
+}
+
+.restaurants__card:hover {
+  box-shadow: 0 4px 12px var(--shadow-medium-grey);
+}
+
+.restaurants__card-link {
+  text-decoration: none;
 }
 
 .restaurants__card-image {
@@ -35,14 +43,14 @@
 }
 
 .restaurants__card-name {
-  color: black;
+  color: var(--font-black-color);
   font-size: 24px;
   margin: 0;
 }
 
 .restaurants__card-time {
   margin: 0;
-  background-color: black;
+  background-color: var(--bg-color-black);
   color: var(--color-white);
   border-radius: 2px;
   padding: 4px 8px;
@@ -72,15 +80,15 @@
 }
 
 .restaurants__card-points {
-  color: #ffc107;
+  color: var(--color-rating);
 }
 
 .restaurants__card-price {
-  color: #8c8c8c;
+  color: var(--font-color-light);
 }
 
 .restaurants__card-type {
-  color: #8c8c8c;
+  color: var(--font-color-light);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -88,7 +96,7 @@
 
 .restaurants__card-type::before {
   content: "";
-  background-color: #8c8c8c;
+  background-color: var(--font-color-light);
   display: inline-block;
   width: 5px;
   height: 5px;

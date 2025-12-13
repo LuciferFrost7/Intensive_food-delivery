@@ -4,7 +4,7 @@
 
 .banner__item {
   min-width: 240px;
-  background-color: #fff1b8;
+  background-color: var(--bg-color-banner);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center right;

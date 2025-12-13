@@ -32,17 +32,17 @@
 }
 
 .products__header-points {
-  color: #ffc107;
+  color: var(--color-rating);
   margin: 0;
 }
 
 .products__header-price {
-  color: #8c8c8c;
+  color: var(--font-color-light);
   margin: 0;
 }
 
 .products__header-type {
-  color: #8c8c8c;
+  color: var(--font-color-light);
   display: flex;
   align-items: center;
   gap: 8px;
@@ -51,7 +51,7 @@
 
 .products__header-type::before {
   content: "";
-  background-color: #8c8c8c;
+  background-color: var(--font-color-light);
   display: inline-block;
   width: 5px;
   height: 5px;

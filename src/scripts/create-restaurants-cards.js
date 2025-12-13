@@ -6,6 +6,7 @@ const restaurantsList = document.querySelector("#restaurants-list");
 function createRestaurantCard(foodElement) {
   /* Create HTML element
   <li class="restaurants__card">
+  <a class="restaurants__card-link" href="/restaurant.html?restaurant=">
     <img class="restaurants__card-image" src="" alt="" />
     <div class="restaurants__card-info">
       <div class="restaurants__card-header">
@@ -21,11 +22,17 @@ function createRestaurantCard(foodElement) {
         <p class="restaurants__card-type"></p>
       </div>
     </div>
+    </a>
   </li>
   */
   const restaurantsCard = document.createElement("li");
-  restaurantsCard.id = `restaurants-card-${foodElement.id}`;
   restaurantsCard.className = "restaurants__card";
+  restaurantsCard.id = `restaurants-card-${foodElement.id}`;
+
+  // card-link
+  const restaurantsCardLink = document.createElement("a");
+  restaurantsCardLink.className = "restaurants__card-link";
+  restaurantsCardLink.href = `/restaurant.html?restaurant=${foodElement.id}`;
 
   const restaurantsCardImage = document.createElement("img");
   restaurantsCardImage.className = "restaurants__card-image";
@@ -85,8 +92,10 @@ function createRestaurantCard(foodElement) {
   restaurantsCardInfo.appendChild(restaurantsCardHeader);
   restaurantsCardInfo.appendChild(restaurantsCardDetails);
 
-  restaurantsCard.appendChild(restaurantsCardImage);
-  restaurantsCard.appendChild(restaurantsCardInfo);
+  restaurantsCardLink.appendChild(restaurantsCardImage);
+  restaurantsCardLink.appendChild(restaurantsCardInfo);
+
+  restaurantsCard.appendChild(restaurantsCardLink);
 
   return restaurantsCard;
 }

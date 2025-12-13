@@ -1,0 +1,24 @@
+.shopping-cart__header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+.shopping-cart__title {
+  font-weight: 700;
+  font-size: 36px;
+  margin: 0;
+}
+
+.shopping-cart__close-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  margin: 0;
+}
+
+.shopping-cart__close-image {
+  max-width: 16px;
+  object-fit: contain;
+}

@@ -1,6 +1,6 @@
 @import url("./components/delivery-logo.css");
 @import url("./components/login.css");
-@import url("./components//shopping-cart.css");
+@import url("./components/shopping-cart/button.css");
 
 .delivery-header {
   background-color: var(--bg-color-main3);

@@ -1,9 +1,13 @@
 .delivery-logo {
   max-width: 100px;
+}
+
+.delivery-logo__link {
   display: flex;
   flex-direction: row;
   align-items: center;
   gap: 12px;
+  text-decoration: none;
 }
 
 .delivery-logo__image {
@@ -12,6 +16,7 @@
 }
 
 .delivery-logo__title {
+  color: var(--font-black-color);
   margin: 0;
   max-width: min-content;
 }

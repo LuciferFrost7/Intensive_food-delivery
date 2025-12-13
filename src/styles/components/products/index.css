@@ -12,5 +12,5 @@
   flex-direction: row;
   flex-wrap: wrap;
   row-gap: 30px;
-  column-gap: 24px;
+  column-gap: 10px;
 }
