@@ -1,7 +1,6 @@
 @import url("./main.css");
 @import url("./header.css");
-@import url("./components/banner.css");
-@import url("./components/restaurants/index.css");
+@import url("./components/products/index.css");
 @import url("./footer.css");
 
 .delivery-main {
