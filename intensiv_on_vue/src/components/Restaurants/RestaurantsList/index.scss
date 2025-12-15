@@ -1,0 +1,105 @@
+.restaurants__card {
+  background-color: var(--bg-color-main3);
+  display: inline-block;
+  overflow: auto;
+  width: 100%;
+  border-radius: 7px;
+  box-shadow: 0 4px 12px var(--shadow-light-grey);
+
+  @media screen and (min-width: 576px) {
+    width: calc((100% - 24px) / 2);
+  }
+
+  @media screen and (min-width: 991px) {
+    width: calc((100% - 48px) / 3);
+  }
+}
+
+.restaurants__card:hover {
+  box-shadow: 0 4px 12px var(--shadow-medium-grey);
+}
+
+.restaurants__card-link {
+  text-decoration: none;
+}
+
+.restaurants__card-image {
+  width: 100%;
+  object-fit: contain;
+}
+
+.restaurants__card-info {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 24px 34px;
+}
+
+.restaurants__card-header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.restaurants__card-name {
+  color: var(--font-black-color);
+  font-size: 24px;
+  margin: 0;
+}
+
+.restaurants__card-time {
+  margin: 0;
+  background-color: var(--bg-color-black);
+  color: var(--color-white);
+  border-radius: 2px;
+  padding: 4px 8px;
+  font-size: 12px;
+}
+
+.restaurants__card-details {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+  align-items: center;
+  gap: 26px;
+}
+
+.restaurants__card-rating {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 8px;
+}
+
+.restaurants__card-star {
+  max-width: 16px;
+  object-fit: contain;
+}
+
+.restaurants__card-points {
+  color: var(--color-rating);
+}
+
+.restaurants__card-price {
+  color: var(--font-color-light);
+}
+
+.restaurants__card-type {
+  color: var(--font-color-light);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.restaurants__card-type::before {
+  content: "";
+  background-color: var(--font-color-light);
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}

@@ -1,0 +1,13 @@
+.restaurants {
+  margin-bottom: 64px;
+
+  &__list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    column-gap: 24px;
+  }
+}
